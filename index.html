@@ -19,7 +19,38 @@
                 <abbr title="Preferred Programming Language">PPL</abbr> stands for Preferred Programming Language.
         </p>
     <div id = "questions">
-        <ol>
-            <li>"Wrote 'Hello, World' in any language"</li>
+        <ol id = "questionsList">
         </ol>
     </div>
+    <div>
+        <input class="button" id="submit" type="submit" value="Calculate My Score!">
+         <input class="button" id="submit" type="submit" value="Clear checkboxes">
+    </div>
+    <script>
+    fetch('questions.json')
+        .then(response => response.json())
+        .then(questions => {
+    const questionList = document.getElementById("questionsList");
+    questions.forEach(q => {
+      const li = document.createElement("li");
+      li.innerHTML = `<label><input type="checkbox"> ${q.text}</label>`;
+      questionList.appendChild(li);
+    });
+  });
+
+  function score() {
+  // Calculates purity
+  var sinList = document.querySelectorAll('input[type="checkbox"]:checked');
+  var sins = sinList.length;
+  var purity = 100 - sins + 1;
+
+  //Sends score to GA4
+  gtag('event', 'score', {
+    'score': purity,
+  });
+
+  sessionStorage.setItem("score", purity);
+  window.location.href = `score/?score=${purity}`;
+}
+    </script>
+    </body>

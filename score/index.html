@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <title>Dev Purity Score Page</title>
+     <link rel="stylesheet" href="../style.css">
+    </head>
+<body>
+  <h2>Your score:</h2>
+    <h1 id="score"></h1>
+
+    <!-- <div id="share" style="margin-top: 1em;">
+      <a id="restart" href="../"><button onclick="restartEvent()">Take again!</button></a>
+      <button onclick="copyLink()">Copy Link</button>
+      <a id="text-share" href="#"><button onclick="textEvent()">Share via Text</button></a>
+      <a id="x-share" href="#" target="_blank" rel="noopener noreferrer"><button onclick="xEvent()">Share on X</button></a>
+    </div>     -->
+
+    <p>Thank you for your submission!</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const score = params.get("score");
+    document.getElementById("score").textContent = `Your score is: ${score}`;
+  </script>
+</body>

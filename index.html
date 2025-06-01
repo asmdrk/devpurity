@@ -23,7 +23,7 @@
         </ol>
     </div>
     <div>
-        <input class="button" id="submit" type="submit" value="Calculate My Score!">
+        <input class="button" id="CalculateButton" type="submit" value="Calculate My Score!">
          <input class="button" id="submit" type="submit" value="Clear checkboxes">
     </div>
     <script>
@@ -38,19 +38,14 @@
     });
   });
 
-  function score() {
+  document.getElementById('CalculateButton').onclick =   function () {
   // Calculates purity
-  var sinList = document.querySelectorAll('input[type="checkbox"]:checked');
-  var sins = sinList.length;
-  var purity = 100 - sins + 1;
+  var checkList = document.querySelectorAll('input[type="checkbox"]:checked');
+  var score = checkList.length;
 
-  //Sends score to GA4
-  gtag('event', 'score', {
-    'score': purity,
-  });
-
-  sessionStorage.setItem("score", purity);
-  window.location.href = `score/?score=${purity}`;
+  sessionStorage.setItem("score", score);
+  window.location.href = `score/index.html?score=${score}`;
 }
+
     </script>
     </body>

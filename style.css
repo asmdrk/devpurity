@@ -3,3 +3,11 @@ html {
     background-color: #FBEEC8; 
     background-image: url("media/owlcomp2.png");
 }
+body {
+    text-align: center;
+    font-size: 20px;
+}
+
+#list {
+    text-align: left;
+}

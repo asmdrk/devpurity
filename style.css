@@ -12,8 +12,5 @@ body {
     text-align: left;
 }
 
-#CalculateButton {
-    text-align: left;}
-
-#submit {
+.button {
     text-align: left;}

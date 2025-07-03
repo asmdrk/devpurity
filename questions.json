@@ -1,7 +1,7 @@
 [{"text": "Forget the syntax for something basic and look it up"},
 {"text": "Write an infinite loop by accident"},
 {"text": "Mess up the terminating condition or itetrative step in a recurive program leading to infinite recursion"},
-{"text": "Copy code from Stack Overflow without understanding what it does"},
+{"text": "Copy code from Stack Overflow  without understanding what it does"},
 {"text": "Copy code from ChatGPT(or any LLM) without understanding what it does"},
 {"text": "Struggle with a syntax related bug"},
 {"text": "Access a dangling pointer"},

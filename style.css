@@ -8,6 +8,12 @@ body {
     font-size: 20px;
 }
 
-#list {
+#questions {
     text-align: left;
 }
+
+#CalculateButton {
+    text-align: left;}
+
+#submit {
+    text-align: left;}
